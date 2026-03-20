@@ -1,0 +1,43 @@
+services:
+  - type: web
+    name: ig-ultra-pro-auto-reply-bot
+    runtime: node
+    plan: free
+    buildCommand: npm install
+    startCommand: npm start
+    autoDeploy: true
+    envVars:
+      - key: NODE_VERSION
+        value: 20
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 10000
+      - key: GRAPH_VERSION
+        value: v25.0
+      - key: ENABLE_AI
+        value: false
+      - key: ENABLE_SIGNATURE_VALIDATION
+        value: false
+      - key: VERIFY_TOKEN
+        sync: false
+      - key: PAGE_ACCESS_TOKEN
+        sync: false
+      - key: APP_SECRET
+        sync: false
+      - key: BASE_URL
+        sync: false
+      - key: BOT_NAME
+        sync: false
+      - key: PUBLIC_WHATSAPP
+        sync: false
+      - key: PUBLIC_EMAIL
+        sync: false
+      - key: PUBLIC_PORTFOLIO
+        sync: false
+      - key: AI_PROVIDER
+        sync: false
+      - key: AI_API_KEY
+        sync: false
+      - key: AI_MODEL
+        sync: false
